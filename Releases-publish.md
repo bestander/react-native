@@ -34,3 +34,14 @@ npm publish
 - Upgrade tags to a release by going to https://github.com/facebook/react-native/tags
 - Click "Add Notes to release"
 - Click Publish
+
+- Update https://facebook.github.io/react-native
+
+Just add tag `latest` when pushing to `0.x-stable` branch, CI will build and deploy the latest docs website.
+
+```
+git tag -d latest
+git push origin :latest
+git tag latest
+git push origin 0.20.0-stable --tags
+```

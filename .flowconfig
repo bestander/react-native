@@ -58,6 +58,9 @@
 .*/node_modules/binary-extensions/binary-extensions.json
 .*/node_modules/url-regex/tlds.json
  .*/\.nvm/.*
+.*/node_modules/joi/.*\.json
+.*/build/.*\.json
+.*/\.buckd/.*
 
 [include]
 

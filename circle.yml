@@ -23,6 +23,7 @@ dependencies:
     - brew install android-sdk
     - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support,android-19
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
+    - android list targets
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

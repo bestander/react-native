@@ -10,7 +10,7 @@ machine:
     ADB_INSTALL_TIMEOUT: 10
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
     ANDROID_HOME: "/usr/local/opt/android-sdk"
-    ANDROID_NDK: "$ANDROID_HOME/android-ndk-r11"
+    ANDROID_NDK: "$ANDROID_HOME/android-ndk-r10e"
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 dependencies:
@@ -30,10 +30,10 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
     - brew install wget
-    - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r11-darwin-x86_64.zip
-    - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r11-darwin-x86_64.zip
-    - mv $ANDROID_HOME/android-ndk-r11-darwin-x86_64.tar.bz2 $ANDROID_HOME/android-ndk-r11
-    - ls /usr/local/opt/android-sdk/android-ndk-r11
+    - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r10e-darwin-x86_64.zip
+    - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.zip
+    - mv $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.tar.bz2 $ANDROID_HOME/android-ndk-r10e
+    - ls $ANDROID_NDK
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

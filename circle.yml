@@ -10,7 +10,7 @@ machine:
     ADB_INSTALL_TIMEOUT: 10
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
     ANDROID_HOME: "/usr/local/opt/android-sdk"
-    PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$PATH"
+    PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 dependencies:
   cache_directories:
@@ -21,7 +21,7 @@ dependencies:
   override:
     # android
     - brew install android-sdk
-    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support
+    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support,android-19
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
     # BUCK
     - brew install ant

@@ -24,8 +24,10 @@ dependencies:
   override:
     # node
     - mkdir ~/.nvm
+    - ls $NVM_DIR
     - brew install nvm
     - ls $NVM_DIR
+    - $(brew --prefix nvm)
     - . "$NVM_DIR/nvm.sh"
     - cat ~/.bashrc
     - . ~/.bashrc

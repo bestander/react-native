@@ -43,6 +43,12 @@ test:
     - source scripts/circle-ci-android-setup.sh && waitForAVD
 
   override:
+    - xctool
+      -project Examples/UIExplorer/UIExplorer.xcodeproj
+      -scheme UIExplorer
+      -sdk iphonesimulator
+      -destination 'platform=iOS Simulator,name=iPhone 5,OS=9.2'
+
     # build app
     - buck/bin/buck build ReactAndroid/src/main/java/com/facebook/react
     - buck/bin/buck build ReactAndroid/src/main/java/com/facebook/react/shell

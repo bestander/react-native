@@ -28,7 +28,7 @@ dependencies:
     - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
     - ls $NVM_DIR
     - . "$NVM_DIR/nvm.sh"
-    - source ~/.bashrc
+    - cat ~/.bashrc
     - nvm install 5.7.0
     - npm config set spin=false
     - npm config set progress=false

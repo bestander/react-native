@@ -10,7 +10,7 @@ machine:
     ADB_INSTALL_TIMEOUT: 10
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
     ANDROID_HOME: "/usr/local/opt/android-sdk"
-    ANDROID_NDK: "$ANDROID_HOME/android-ndk-r10e"
+    ANDROID_NDK: "$ANDROID_HOME/android-ndk-r11"
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 dependencies:

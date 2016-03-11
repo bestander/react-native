@@ -13,6 +13,8 @@ machine:
 
 dependencies:
   pre:
+    # android
+    - curl -L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=build-tools-23.0.1,android-19,sys-img-armeabi-v7a-android-19 && source ~/.android-sdk-installer/env
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi
@@ -30,7 +32,6 @@ dependencies:
     - export NVM_DIR="$PWD/.nvm"
     - source $(brew --prefix nvm)/nvm.sh
     - nvm install 5
-    - curl -L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=build-tools-23.0.1,android-19,sys-img-armeabi-v7a-android-19 && source ~/.android-sdk-installer/env
   cache_directories:
     - "ReactAndroid/build/downloads"
     - "buck"

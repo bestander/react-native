@@ -23,6 +23,7 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # node
+    - touch ~/.bash_profile
     - brew install nvm
     - mkdir ~/.nvm
     - source $(brew --prefix nvm)/nvm.sh

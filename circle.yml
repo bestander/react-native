@@ -21,6 +21,16 @@ dependencies:
     - "node_modules"
     - "/usr/local/opt/android-sdk"
   override:
+    # node
+    - brew install nvm
+    - export NVM_DIR="~/.nvm"
+    - source $(brew --prefix nvm)/nvm.sh
+    - nvm install 5.8.0
+    - npm config set spin=false
+    - npm config set progress=false
+    - npm install
+    - cd website && npm install
+
     # android
     - if [[ ! -d $ANDROID_HOME ]]; then source scripts/mac-setup-android.sh; fi
     # BUCK
@@ -34,15 +44,6 @@ dependencies:
     - buck/bin/buck fetch ReactAndroid/src/test/...
     - buck/bin/buck fetch ReactAndroid/src/androidTest/...
     - ./gradlew :ReactAndroid:downloadBoost :ReactAndroid:downloadDoubleConversion :ReactAndroid:downloadFolly :ReactAndroid:downloadGlog
-    # node
-    - brew install nvm
-    - export NVM_DIR="$PWD/.nvm"
-    - source $(brew --prefix nvm)/nvm.sh
-    - nvm install 5.8.0
-    - npm config set spin=false
-    - npm config set progress=false
-    - npm install
-    - cd website && npm install
 
 test:
   pre:

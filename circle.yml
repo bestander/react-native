@@ -23,7 +23,7 @@ dependencies:
     - brew install android-sdk
     - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
     - echo y | android update sdk --no-ui --all --filter extra-android-support
-    - echo y | android update sdk --no-ui --all --filter platform
+    - echo y | android update sdk --no-ui --all --filter platform-23.0.1
     - echo y | android update sdk --no-ui --all --filter android-19
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
     - android list targets

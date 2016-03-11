@@ -22,8 +22,9 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # node
-    - curl -L http://git.io/n-install | echo y | bash
-    - n 5.7.0
+    - git clone https://github.com/creationix/nvm.git ~/.nvm
+    - source ~/.nvm/nvm.sh
+    - nvm install 5.7.0
     - node --version
     - npm config set spin=false
     - npm config set progress=false

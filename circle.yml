@@ -30,9 +30,9 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
     - wget http://dl.google.com/android/ndk/android-ndk64-r10e-darwin-x86_64.bin -O ndk.bin
-    - mv android-ndk-r10e $ANDROID_HOME
     - chmod a+x ndk.bin
     - ./ndk.bin > ndk.extract.log
+    - mv android-ndk-r10e $ANDROID_HOME
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

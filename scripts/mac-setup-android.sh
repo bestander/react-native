@@ -3,6 +3,7 @@ echo y | android update sdk --no-ui --all --filter extra-android-m2repository
 echo y | android update sdk --no-ui --all --filter extra-android-support
 echo y | android update sdk --no-ui --all --filter android-23
 echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
+echo y | android update sdk --no-ui --all --filter platform-tools
 echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-23
 source scripts/circle-ci-android-setup.sh && getAndroidSDK
 brew install wget

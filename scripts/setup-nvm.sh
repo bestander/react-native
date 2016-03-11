@@ -9,3 +9,4 @@ ls $(brew --prefix nvm)
 source $(brew --prefix nvm)/nvm.sh
 ls -al $NVM_DIR
 ls ~/.nvm
+nvm help

@@ -26,7 +26,6 @@ dependencies:
     - mkdir ~/.nvm
     - ls ~/.nvm
     - brew install nvm
-    - export
     - ls $NVM_DIR
     - ls $(brew --prefix nvm)
     - . $(brew --prefix nvm)/nvm.sh

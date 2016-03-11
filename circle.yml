@@ -29,7 +29,7 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
     - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
-    - brew install wget unzip
+    - brew install wget
     - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r11-darwin-x86_64.zip
     - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r11-darwin-x86_64.zip
     - mv $ANDROID_HOME/android-ndk-r11-darwin-x86_64.tar.bz2 $ANDROID_HOME/android-ndk-r11

@@ -11,6 +11,7 @@ machine:
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
     ANDROID_HOME: "/usr/local/opt/android-sdk"
     ANDROID_NDK: "$ANDROID_HOME/android-ndk-r10e"
+    NVM_DIR: "~/.nvm"
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 dependencies:
@@ -23,8 +24,8 @@ dependencies:
   override:
     # node
     - brew install nvm
-    - export NVM_DIR="~/.nvm"
-    - source $(brew --prefix nvm)/nvm.sh
+    - mkdir ~/.nvm
+    - . $(brew --prefix nvm)/nvm.sh
     - nvm install 5.8.0
     - npm config set spin=false
     - npm config set progress=false

@@ -5,8 +5,6 @@ general:
 machine:
   xcode:
     version: 7.3
-  node:
-    version: 5.6.0
   environment:
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$PATH"
     TERM: "dumb"

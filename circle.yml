@@ -29,9 +29,8 @@ dependencies:
     - ls $NVM_DIR
     - ls $(brew --prefix nvm)
     - . $(brew --prefix nvm)/nvm.sh
-    - cat ~/.bashrc
-    - . ~/.bashrc
     - ls $NVM_DIR
+    - ls ~/.nvm
     - nvm install 5.7.0
     - npm config set spin=false
     - npm config set progress=false

@@ -12,7 +12,6 @@ machine:
     ANDROID_HOME: "/usr/local/opt/android-sdk"
     ANDROID_NDK: "$ANDROID_HOME/android-ndk-r10e"
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
-    NVM_DIR: "~/.nvm"
 
 dependencies:
   cache_directories:
@@ -23,17 +22,7 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # node
-    - mkdir ~/.nvm
-    - ls -al ~/.nvm
-    - brew install nvm
-    - export NVM_DIR=~/.nvm
-    - ls -al ~/.nvm
-    - echo $NVM_DIR
-    - ls -al $NVM_DIR
-    - ls $(brew --prefix nvm)
-    - source $(brew --prefix nvm)/nvm.sh
-    - ls -al $NVM_DIR
-    - ls ~/.nvm
+    - source scripts/setup-nvm.sh
     - nvm install 5.7.0
     - npm config set spin=false
     - npm config set progress=false

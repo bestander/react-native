@@ -23,10 +23,10 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # node
-    - mkdir ~/.nvm
     - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-    - ls  ~/.nvm
-    - source ~/.nvm/nvm.sh
+    - ls $NVM_DIR
+    - echo $NVM_DIR
+    - source $NVM_DIR/nvm.sh
     - nvm install 5.7.0
     - npm config set spin=false
     - npm config set progress=false

@@ -24,7 +24,7 @@ dependencies:
   override:
     # node
     - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-    - source ~.bashrc
+    - source ~/.bashrc
     - nvm install 5
     - npm config set spin=false
     - npm config set progress=false

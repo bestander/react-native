@@ -22,18 +22,17 @@ dependencies:
   override:
     # android
     - brew install android-sdk
-#    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
-#    - echo y | android update sdk --no-ui --all --filter extra-android-support
-#    # TODO test if stability is higher on 23?
-#    - echo y | android update sdk --no-ui --all --filter android-19
-#    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
-#    - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
-#    - source scripts/circle-ci-android-setup.sh && getAndroidSDK
-    - brew install wget
-    - wget http://dl.google.com/android/ndk/android-ndk64-r10e-darwin-x86_64.bin -O ndk.bin
-    - chmod a+x ndk.bin
-    - ./ndk.bin > ndk.extract.log
-    - mv android-ndk-r10e $ANDROID_HOME
+    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
+    - echo y | android update sdk --no-ui --all --filter extra-android-support
+    # TODO test if stability is higher on 23?
+    - echo y | android update sdk --no-ui --all --filter android-19
+    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
+    - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
+    - source scripts/circle-ci-android-setup.sh && getAndroidSDK
+    - brew install wget unzip
+    - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r11-darwin-x86_64.zip
+    - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r11-darwin-x86_64.zip
+    - mv $ANDROID_HOME/android-ndk-r11-darwin-x86_64.tar.bz2 $ANDROID_HOME/android-ndk-r11
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

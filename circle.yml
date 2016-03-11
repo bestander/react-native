@@ -6,19 +6,23 @@ machine:
   xcode:
     version: 7.3
   environment:
-    PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$PATH"
     TERM: "dumb"
     ADB_INSTALL_TIMEOUT: 10
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
+    ANDROID_HOME: "/usr/local/opt/android-sdk"
+    PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$PATH"
 
 dependencies:
   cache_directories:
     - "ReactAndroid/build/downloads"
     - "buck"
     - "website/node_modules"
+    - "/usr/local/opt/android-sdk"
   override:
     # android
     - brew install android-sdk
+    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support
+    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

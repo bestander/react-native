@@ -21,7 +21,7 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # android
-    - [[ -d $ANDROID_HOME]] || source scripts/mac-setup-android.sh
+    - [[ ! -d $ANDROID_HOME]] && source scripts/mac-setup-android.sh
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

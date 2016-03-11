@@ -21,19 +21,7 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # android
-    - brew install android-sdk
-    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
-    - echo y | android update sdk --no-ui --all --filter extra-android-support
-    # TODO test if stability is higher on 23?
-    - echo y | android update sdk --no-ui --all --filter android-19
-    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
-    - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
-    - source scripts/circle-ci-android-setup.sh && getAndroidSDK
-    - brew install wget
-    - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r10e-darwin-x86_64.zip
-    - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.zip
-    - rm $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.zip
-    - ls $ANDROID_NDK
+    source scripts/mac-setup-android.sh
     # BUCK
     - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi

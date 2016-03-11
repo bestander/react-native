@@ -23,9 +23,10 @@ dependencies:
     - brew install android-sdk
     - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
     - echo y | android update sdk --no-ui --all --filter extra-android-support
+    # TODO test if stability is higher on 23?
     - echo y | android update sdk --no-ui --all --filter android-19
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
-    - echo y | android update sdk --no-ui --all --filter android-armv7a-eabi-system-image-19
+    - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-19
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
     # BUCK
     - brew install ant

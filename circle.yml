@@ -25,7 +25,7 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter extra-android-support
     - echo y | android update sdk --no-ui --all --filter android-19
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
-    - echo y | android update sdk --no-ui --all --filter sys-img-armv7a-android-19
+    - echo y | android update sdk --no-ui --all --filter android-armv7a-eabi-system-image-19
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
     # BUCK
     - brew install ant

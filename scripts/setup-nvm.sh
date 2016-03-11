@@ -1,12 +1,5 @@
-mkdir ~/.nvm
-ls -al ~/.nvm
-brew install nvm
-export NVM_DIR=~/.nvm
-ls -al ~/.nvm
-echo $NVM_DIR
-ls -al $NVM_DIR
-ls $(brew --prefix nvm)
-source $(brew --prefix nvm)/nvm.sh
-ls -al $NVM_DIR
-ls ~/.nvm
-nvm help
+rm -rf ~/.nvm
+git clone https://github.com/creationix/nvm.git ~/.nvm
+source ~/.nvm/nvm.sh
+nvm install 5.7.0
+node --version

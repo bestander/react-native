@@ -3,6 +3,8 @@ general:
     ignore:
       - gh-pages # list of branches to ignore
 machine:
+  xcode:
+    version: 9.2
   node:
     version: 5.6.0
   environment:

@@ -12,8 +12,13 @@ machine:
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx512m -XX:+HeapDumpOnOutOfMemoryError"'
 
 dependencies:
-  pre:
+  cache_directories:
+    - "ReactAndroid/build/downloads"
+    - "buck"
+    - "website/node_modules"
+  override:
     # android
+    - brew install android-sdk
     - curl -L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=build-tools-23.0.1,android-19,sys-img-armeabi-v7a-android-19 && source ~/.android-sdk-installer/env
     # BUCK
     - brew install ant
@@ -31,16 +36,11 @@ dependencies:
     - brew install nvm
     - export NVM_DIR="$PWD/.nvm"
     - source $(brew --prefix nvm)/nvm.sh
-    - nvm install 5
-  cache_directories:
-    - "ReactAndroid/build/downloads"
-    - "buck"
-    - "website/node_modules"
-  override:
     - npm config set spin=false
     - npm config set progress=false
     - npm install
     - cd website && npm install
+    - nvm install 5
 
 test:
   pre:

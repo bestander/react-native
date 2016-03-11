@@ -32,7 +32,7 @@ dependencies:
     - brew install wget
     - cd $ANDROID_HOME && wget http://dl.google.com/android/repository/android-ndk-r10e-darwin-x86_64.zip
     - cd $ANDROID_HOME && unzip $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.zip
-    - mv $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.tar.bz2 $ANDROID_HOME/android-ndk-r10e
+    - rm $ANDROID_HOME/android-ndk-r10e-darwin-x86_64.tar.bz2
     - ls $ANDROID_NDK
     # BUCK
     - brew install ant

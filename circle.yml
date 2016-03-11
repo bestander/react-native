@@ -12,6 +12,7 @@ machine:
     ANDROID_HOME: "/usr/local/opt/android-sdk"
     ANDROID_NDK: "$ANDROID_HOME/android-ndk-r10e"
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-2.9/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+    NVM_DIR: "~/.nvm"
 
 dependencies:
   cache_directories:

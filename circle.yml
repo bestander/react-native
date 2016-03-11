@@ -30,7 +30,7 @@ dependencies:
     - echo $NVM_DIR
     - ls -al $NVM_DIR
     - ls $(brew --prefix nvm)
-    - . $(brew --prefix nvm)/nvm.sh
+    - source $(brew --prefix nvm)/nvm.sh
     - ls -al $NVM_DIR
     - ls ~/.nvm
     - nvm install 5.7.0

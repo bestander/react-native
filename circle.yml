@@ -25,8 +25,8 @@ dependencies:
     # node
     - brew install nvm
     - mkdir ~/.nvm
-    - . $(brew --prefix nvm)/nvm.sh
-    - nvm install 5.8.0
+    - source $(brew --prefix nvm)/nvm.sh
+    - nvm install 5.7.0
     - npm config set spin=false
     - npm config set progress=false
     - npm install

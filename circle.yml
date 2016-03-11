@@ -14,6 +14,7 @@ machine:
 dependencies:
   pre:
     # BUCK
+    - brew install ant
     - if [[ ! -e buck ]]; then git clone https://github.com/facebook/buck.git; fi
     - cd buck && ant
     - buck/bin/buck --version
@@ -24,10 +25,14 @@ dependencies:
     - buck/bin/buck fetch ReactAndroid/src/androidTest/...
     - source scripts/circle-ci-android-setup.sh && getAndroidSDK
     - ./gradlew :ReactAndroid:downloadBoost :ReactAndroid:downloadDoubleConversion :ReactAndroid:downloadFolly :ReactAndroid:downloadGlog
+    # node
+    - brew install nvm
+    - export NVM_DIR="$PWD/.nvm"
+    - source $(brew --prefix nvm)/nvm.sh
+    - nvm install 5
   cache_directories:
     - "ReactAndroid/build/downloads"
     - "buck"
-    - "buck-out/bin"
     - "website/node_modules"
   override:
     - npm config set spin=false

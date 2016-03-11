@@ -28,7 +28,7 @@ dependencies:
     - export NVM_DIR=~/.nvm
     - ls $NVM_DIR
     - ls $(brew --prefix nvm)
-    - . $(brew --prefix nvm)/nvm.sh"
+    - . $(brew --prefix nvm)/nvm.sh
     - cat ~/.bashrc
     - . ~/.bashrc
     - ls $NVM_DIR

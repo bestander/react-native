@@ -22,7 +22,7 @@ dependencies:
     - "/usr/local/opt/android-sdk"
   override:
     # node
-    - curl -L http://git.io/n-install | bash
+    - echo y | curl -L http://git.io/n-install | bash
     - n 5.7.0
     - node --version
     - npm config set spin=false

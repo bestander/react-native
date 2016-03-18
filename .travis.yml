@@ -19,7 +19,7 @@ install:
   - npm install
 
 script:
-  - npm run flow
+  - npm run flow check
 
 env:
   matrix:

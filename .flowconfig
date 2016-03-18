@@ -57,6 +57,7 @@
 .*/node_modules/builtin-modules/builtin-modules.json
 .*/node_modules/binary-extensions/binary-extensions.json
 .*/node_modules/url-regex/tlds.json
+ .*/\.nvm/.*
 
 [include]
 

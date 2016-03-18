@@ -77,16 +77,16 @@ const defaultProps = {
  * A controlled navigation view that renders a list of cards.
  */
 class NavigationCardStack extends React.Component {
-  _applyAnimation: NavigationAnimationSetter;
   _renderScene : NavigationSceneRenderer;
+  _setTiming: NavigationAnimationSetter;
 
   constructor(props: Props, context: any) {
     super(props, context);
   }
 
-  componentWillMount(): void {
-    this._applyAnimation = this._applyAnimation.bind(this);
+  componentWillMount() {
     this._renderScene = this._renderScene.bind(this);
+    this._setTiming = this._setTiming.bind(this);
   }
 
   shouldComponentUpdate(nextProps: Object, nextState: Object): boolean {
@@ -103,7 +103,7 @@ class NavigationCardStack extends React.Component {
         navigationState={this.props.navigationState}
         renderOverlay={this.props.renderOverlay}
         renderScene={this._renderScene}
-        setTiming={this._applyAnimation}
+        setTiming={this._setTiming}
         style={[styles.animatedView, this.props.style]}
       />
     );
@@ -120,7 +120,7 @@ class NavigationCardStack extends React.Component {
     );
   }
 
-  _applyAnimation(
+  _setTiming(
     position: NavigationAnimatedValue,
     navigationState: NavigationParentState,
   ): void {

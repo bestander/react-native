@@ -51,6 +51,8 @@
 .*/node_modules/resolve/lib/core.json
 .*/node_modules/jsonparse/samplejson/.*\.json
 .*/node_modules/json5/test/.*\.json
+.*/node_modules/isemail/.*\.json
+.*/node_modules/tr46/.*\.json
 .*/node_modules/ua-parser-js/test/.*\.json
 .*/node_modules/builtin-modules/builtin-modules.json
 .*/node_modules/binary-extensions/binary-extensions.json

@@ -189,7 +189,8 @@
     "yargs": "^3.24.0",
     "yeoman-environment": "^1.2.7",
     "yeoman-generator": "^0.20.3",
-    "left-pad": "1.1.1"
+    "left-pad": "1.1.1",
+    "is-array": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.0",

@@ -1,7 +1,7 @@
-lodash._reinterpolate@~3.0.0:
-  name lodash._reinterpolate
-  version "3.0.0"
-  resolved lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d
+lodash._root@~3.0.0:
+  name lodash._root
+  version "3.0.1"
+  resolved lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692
 abab@^1.0.0:
   name abab
   version "1.0.3"
@@ -626,7 +626,7 @@ babel-plugin-transform-es2015-computed-properties@^6.5.0:
     babel-helper-define-map "^6.8.0"
     babel-runtime "^6.0.0"
     babel-template "^6.8.0"
-babel-plugin-transform-es2015-computed-properties@^6.6.5 babel-plugin-transform-es2015-computed-properties@^6.8.0
+babel-plugin-transform-es2015-computed-properties@^6.6.5 babel-plugin-transform-es2015-computed-properties@^6.5.0
 babel-plugin-transform-es2015-computed-properties@^6.8.0:
   name babel-plugin-transform-es2015-computed-properties
   version "6.8.0"
@@ -3543,16 +3543,16 @@ is-zip@^1.0.0:
   name is-zip
   version "1.0.0"
   resolved is-zip-1.0.0.tgz#47b0a8ff4d38a76431ccfd99a8e15a4c86ba2325
-isarray@^1.0.0 isarray@~1.0.0
-isarray@~1.0.0:
-  name isarray
-  version "1.0.0"
-  resolved isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11
+isarray@^1.0.0 isarray@1.0.0
+isarray@~1.0.0 isarray@1.0.0
 isarray@0.0.1:
   name isarray
   version "0.0.1"
   resolved isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf
-isarray@1.0.0 isarray@~1.0.0
+isarray@1.0.0:
+  name isarray
+  version "1.0.0"
+  resolved isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11
 isemail@1.x.x:
   name isemail
   version "1.2.0"
@@ -3567,6 +3567,7 @@ isobject@^2.0.0:
   resolved isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89
   dependencies:
     isarray "1.0.0"
+isobject@^2.1.0 isobject@^2.0.0
 isomorphic-fetch@^2.1.1:
   name isomorphic-fetch
   version "2.2.1"
@@ -4032,18 +4033,18 @@ lodash._reinterpolate@^3.0.0:
   name lodash._reinterpolate
   version "3.0.0"
   resolved lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d
-abbrev@1:
-  name abbrev
-  version "1.0.9"
-  resolved abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135
+lodash._reinterpolate@~3.0.0:
+  name lodash._reinterpolate
+  version "3.0.0"
+  resolved lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d
 lodash._root@^3.0.0:
   name lodash._root
   version "3.0.1"
   resolved lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692
-lodash._root@~3.0.0:
-  name lodash._root
-  version "3.0.1"
-  resolved lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692
+abbrev@1:
+  name abbrev
+  version "1.0.9"
+  resolved abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135
 lodash._stringtopath@~4.8.0:
   name lodash._stringtopath
   version "4.8.0"
@@ -5166,7 +5167,7 @@ readable-stream@^2.0.0:
     process-nextick-args "~1.0.6"
     string_decoder "~0.10.x"
     util-deprecate "~1.0.1"
-readable-stream@^2.0.1 readable-stream@^2.0.2
+readable-stream@^2.0.1 "readable-stream@^2.0.0 || ^1.1.13"
 readable-stream@^2.0.2:
   name readable-stream
   version "2.1.4"
